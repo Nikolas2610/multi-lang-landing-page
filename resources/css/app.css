@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TODO: Download font family Gilroy */
+
+.meta-trader-vector{
+    /* transform: rotate(-10.5deg); */
+}
