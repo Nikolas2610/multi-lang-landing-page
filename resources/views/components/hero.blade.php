@@ -2,7 +2,7 @@
     <x-container class="flex items-center h-full">
         <div class="z-10 w-1/2">
             {{-- Title --}}
-            <div class="text-primary text-5xl mb-6 uppercase font-semibold">
+            <div class="text-primary text-3xl mb-6 uppercase font-semibold w-full">
                 {{ __('messages.hero.title') }}
             </div>
             {{-- Subtitle --}}
@@ -10,7 +10,7 @@
                 {{ __('messages.hero.subtitle') }}
             </div>
             {{-- List items --}}
-            <ul class="list-disc ml-8 mb-6">
+            <ul class="list-disc ml-8 mb-8 text-lg">
                 @for ($i = 1; $i <= 3; $i++)
                     <li>
                         {{ __('messages.hero.list.item-' . $i) }}
@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="h-full flex items-center justify-end z-10 w-1/2">
-            <img src="{{ asset('images/device-edit.png') }}" class="w-full" alt="device">
+            <img src="{{ asset('images/device.png') }}" class="w-full" alt="device">
         </div>
     </x-container>
     {{-- Absolute position vector --}}

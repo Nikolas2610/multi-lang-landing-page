@@ -49,11 +49,27 @@ return [
         'title' => 'TopTrader Platform',
         'items' => [
             'item-1' => [
+                'title' => 'Trustworthy',
+                'list' => [
+                    'item-1' => 'Bank-level encryption and secure authentication',
+                    'item-2' => 'Two-factor authentication for enhanced account protection',
+                    'item-3' => 'Reliable servers with minimal downtime for uninterrupted trading'
+                ]
+            ],
+            'item-2' => [
                 'title' => 'Simple',
                 'list' => [
                     'item-1' => 'A light trading app with fast access to the markets',
                     'item-2' => 'Easy trading through your mobile or web browser',
                     'item-3' => 'Manage your portfolio from anywhere',
+                ]
+            ],
+            'item-3' => [
+                'title' => 'Informative',
+                'list' => [
+                    'item-1' => 'Comprehensive tutorials and educational materials for beginners',
+                    'item-2' => 'Access to expert trading insights and tips',
+                    'item-3' => 'Interactive webinars and live trading sessions for continuous learning'
                 ]
             ]
         ]

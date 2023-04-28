@@ -1,9 +1,9 @@
-<nav class="bg-white fixed w-full z-20 top-0 left-0">
+<nav class="bg-white fixed w-full z-20 top-0 left-0 text-base">
     <x-container class="flex flex-wrap items-center justify-between mx-auto py-8">
         <a href="https://flowbite.com/" class="flex items-center">
             <img src="{{ asset('images/logo/logo.svg') }}" class="h-8" alt="Logo">
         </a>
-        <div class="flex md:order-2 items-center gap-4 relative">
+        <div class="flex md:order-2 items-center gap-6 relative">
             <div class="md:flex flex-col hidden">
                 <x-nav-dropdown-lang title="En" key="lang" />
             </div>

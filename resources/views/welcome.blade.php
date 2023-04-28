@@ -8,9 +8,10 @@
     <title>Top Trader</title>
 </head>
 
-<body class="h-screen overflow-x-auto relative">
+<body class="h-screen overflow-x-auto relative font-gilroy">
     <x-navbar lang="{{ $language }}"></x-navbar>
     <x-hero />
+    <x-top-trader-platform />
     <x-meta-trader />
     <x-what-if />
     <x-footer />

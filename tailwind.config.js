@@ -13,7 +13,8 @@ content: [
         'gray': {
           '100': '#F3F3F3',
           '200': '#EBEBEB', 
-          '300': '#666666'
+          '300': '#EEEEEE', 
+          '400': '#666666'
         }, 
         'dark-cyan': '#31af9a'
       }, 
@@ -34,7 +35,22 @@ content: [
         'fit-content': 'fit-content',
       },
       fontSize: {
-        'xs': '10px',
+        xs: '10px',
+        base: '14px',
+        lg: '20px',
+        xl: '24px',
+        '2xl': '32px',
+        '3xl': ['44px', '52px'],
+        '4xl': ['48px', '50px'],
+      },
+      lineHeight: {
+        '50': '50px',
+      },
+      filter: {
+        'invert': 'invert(100%)',
+      }, 
+      fontFamily: {
+        'gilroy': ['Gilroy', 'sans-serif'],
       },
     },
   },

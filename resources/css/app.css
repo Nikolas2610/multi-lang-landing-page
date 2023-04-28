@@ -4,6 +4,46 @@
 
 /* TODO: Download font family Gilroy */
 
-.meta-trader-vector{
-    /* transform: rotate(-10.5deg); */
+.meta-trader-content, .meta-trader-image {
+    position: absolute;
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.meta-trader-content.active, .meta-trader-image.active {
+    animation-name: fadeInMoveRight;
+    z-index: 2;
+}
+
+.meta-trader-content.inactive, .meta-trader-image.inactive {
+    animation-name: fadeOutMoveRight;
+    z-index: 1;
+}
+
+@keyframes fadeInMoveRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOutMoveRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
 }

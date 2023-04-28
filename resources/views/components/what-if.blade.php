@@ -6,11 +6,11 @@
         </div>
         <div class="w-5/12">
             {{-- Title --}}
-            <div class="text-3xl mb-8 font-semibold w-2/4">
+            <div class="text-3xl mb-8 font-semibold">
                 {{ __('messages.what-if.title') }}
             </div>
             {{-- List items --}}
-            <ul class="list-disc ml-8">
+            <ul class="list-disc ml-8 text-lg">
                 @for ($i = 1; $i <= 7; $i++)
                     <li>
                         {{ __('messages.what-if.list.item-' . $i) }}
@@ -22,12 +22,12 @@
     {{-- Sub footer --}}
     <x-container class="h-[424px] flex justify-center flex-col relative z-10">
         {{-- Title --}}
-        <div class="text-4xl mb-10 font-semibold w-4/12">
+        <div class="text-3xl mb-10 font-semibold w-5/12">
             {{ __('messages.sub-footer.title') }}
         </div>
         {{-- Button --}}
         <a href="#"
-            class="bg-primary px-2 h-16 rounded-2xl hover:bg-opacity-80 text-black font-medium flex justify-center items-center gap-2 text-2xl transition duration-300 cursor-pointer w-64">
+            class="bg-primary px-2 h-16 rounded-2xl hover:bg-opacity-80 text-black font-medium flex justify-center items-center gap-2 text-lg transition duration-300 cursor-pointer w-72">
             {{ __('messages.sub-footer.btn') }}
         </a>
     </x-container>

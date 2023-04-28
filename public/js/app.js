@@ -2164,6 +2164,7 @@ module.exports = {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 __webpack_require__(/*! ./navbar */ "./resources/js/navbar.js");
+__webpack_require__(/*! ./top-trader-animate */ "./resources/js/top-trader-animate.js");
 
 /***/ }),
 
@@ -2282,6 +2283,85 @@ var navMenu = document.getElementById('navbar-sticky');
 var burger = document.getElementById('burger');
 burger.addEventListener('click', function () {
   navMenu.classList.toggle('hidden');
+});
+
+/***/ }),
+
+/***/ "./resources/js/top-trader-animate.js":
+/*!********************************************!*\
+  !*** ./resources/js/top-trader-animate.js ***!
+  \********************************************/
+/***/ (() => {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var traderButtons = Array.from(document.getElementsByClassName('trader__btn'));
+  var contentBlocks = Array.from(document.getElementsByClassName('meta-trader-content'));
+  var contentImages = Array.from(document.getElementsByClassName('meta-trader-image'));
+  traderButtons.forEach(function (button, index) {
+    button.addEventListener('click', function () {
+      var key = button.getAttribute('data-key');
+
+      // Add 'invert' class to the clicked buttons icon
+      var clickedIcon = document.getElementById("trader__icons-".concat(key));
+      clickedIcon.classList.add('filter', 'invert');
+
+      // Remove 'invert' class from other buttons icons
+      traderButtons.forEach(function (otherButton) {
+        if (otherButton !== button) {
+          var otherKey = otherButton.getAttribute('data-key');
+          var otherIcon = document.getElementById("trader__icons-".concat(otherKey));
+          otherIcon.classList.remove('filter', 'invert');
+        }
+      });
+
+      // Show the clicked buttons title
+      var clickedTitle = document.getElementById("trader__title-".concat(key));
+      clickedTitle.classList.remove('hidden');
+
+      // Hide other buttons titles
+      traderButtons.forEach(function (otherButton) {
+        if (otherButton !== button) {
+          var otherKey = otherButton.getAttribute('data-key');
+          var otherTitle = document.getElementById("trader__title-".concat(otherKey));
+          otherTitle.classList.add('hidden');
+        }
+      });
+
+      // Remove 'bg-secondary' class and add 'bg-gray-300' class from other buttons
+      traderButtons.forEach(function (otherButton) {
+        if (otherButton !== button) {
+          otherButton.classList.remove('bg-secondary');
+          otherButton.classList.add('bg-gray-300');
+        }
+      });
+
+      // Add 'bg-secondary' class and remove 'bg-gray-300' class to the active button
+      button.classList.remove('bg-gray-300');
+      button.classList.add('bg-secondary');
+
+      // Show the clicked content block and hide other content blocks
+      contentBlocks.forEach(function (contentBlock, contentIndex) {
+        if (contentIndex === index) {
+          contentBlock.classList.add('active');
+          contentBlock.classList.remove('inactive');
+        } else {
+          contentBlock.classList.remove('active');
+          contentBlock.classList.add('inactive');
+        }
+      });
+
+      // Show the clicked image block and hide other image blocks
+      contentImages.forEach(function (contentBlock, contentIndex) {
+        if (contentIndex === index) {
+          contentBlock.classList.add('active');
+          contentBlock.classList.remove('inactive');
+        } else {
+          contentBlock.classList.remove('active');
+          contentBlock.classList.add('inactive');
+        }
+      });
+    });
+  });
 });
 
 /***/ }),
