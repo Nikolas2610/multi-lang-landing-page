@@ -7,3 +7,8 @@ Route::group(['prefix' => '{language}'], function () {
         return view('index', ['language' => $language]);
     })->name('{language}.home');
 });
+
+// Fallback route
+Route::fallback(function () {
+    return redirect('/en');
+});
