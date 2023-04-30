@@ -22,7 +22,9 @@
                     </div>
                     <div class="col-span-1">
                         <div>
-                            {{ __('messages.footer.social') }}
+                            <div class="text-black font-semibold text-sm">
+                                {{ __('messages.footer.social') }}
+                            </div>
                             <div class="flex items-center xl:gap-5 lg:gap-2 gap-5 mt-4">
                                 <a href="https://goldenburggroup.eu" target="_blank">
                                     <img src="{{ asset('images/icons/social/facebook.svg') }}" alt="facebook"

@@ -7,10 +7,12 @@
             <div class="lg:flex flex-col hidden">
                 <x-nav-dropdown-lang key="lang" />
             </div>
-            <a href="https://goldenburggroup.eu" target="_blank" class="hidden lg:block">Sign In</a>
+            <a href="https://goldenburggroup.eu" target="_blank" class="hidden lg:block">
+                {{ __('messages.nav.sign-in') }}
+            </a>
             <a type="button" href="https://goldenburggroup.eu" target="_blank"
                 class="text-black bg-primary hover:bg-opacity-60 transition duration-300 focus:ring-0 focus:outline-none font-medium rounded-xl text-sm py-3 xl:px-6 px-4 text-center mr-3 xl:mr-0">
-                Get started
+                {{ __('messages.nav.btn') }}
             </a>
 
             <button data-collapse-toggle="navbar-sticky" type="button" id="burger"
@@ -45,7 +47,7 @@
                 </li>
                 <li
                     class="py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 xl:hover:bg-transparent xl:p-0 xl:w-auto cursor-pointer lg:hidden">
-                    Sign in
+                    {{ __('messages.nav.sign-in') }}
                 </li>
             </ul>
         </div>
