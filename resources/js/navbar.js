@@ -1,21 +1,21 @@
-// Function 1
+// Open with click or hover the dropdowns
 document.addEventListener('DOMContentLoaded', function () {
     const keys = ['products', 'platforms', 'learn', 'company', 'lang', 'lang-mob'];
 
     function isLargeScreen() {
-        return window.innerWidth >= 768;
+        return window.innerWidth >= 1024;
     }
 
     function fadeIn(element, icon) {
         element.classList.remove('hidden');
         icon.classList.remove('rotate-180');
         setTimeout(() => {
-            element.classList.remove('md:opacity-0');
+            element.classList.remove('lg:opacity-0');
         }, 50); // Adding a short delay to allow the browser to process the display change
     }
 
     function fadeOut(element, icon) {
-        element.classList.add('md:opacity-0');
+        element.classList.add('lg:opacity-0');
         icon.classList.add('rotate-180');
         element.addEventListener('transitionend', () => {
             element.classList.add('hidden');
@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // Show on drop items on click
     keys.forEach(key => {
         const btnMobile = document.getElementById(`dd-${key}__btn`);
         const icon = document.getElementById(`dd-${key}__icon`);

@@ -16,10 +16,17 @@ class SetLanguage
      */
     public function handle(Request $request, Closure $next)
     {
-        if (in_array($request->language, ['en', 'gr'])) {
-            app()->setLocale($request->language);
+        $availableLanguages = ['en', 'it', 'es'];
+        $requestedLanguage = $request->segment(1);
+
+        if (in_array($requestedLanguage, $availableLanguages)) {
+            app()->setLocale($requestedLanguage);
         } else {
-            app()->setLocale('en');
+            return redirect('/en');
+        }
+
+        if ($requestedLanguage === 'en' && !empty($request->segment(2))) {
+            return redirect('/');
         }
 
         return $next($request);

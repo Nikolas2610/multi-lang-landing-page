@@ -22,7 +22,7 @@ content: [
         padding: {
           DEFAULT: '1rem',
           sm: '2rem',
-          lg: '4rem',
+          lg: '2rem',
           xl: '2rem',
           '2xl': '2rem',
         },
@@ -36,12 +36,13 @@ content: [
       },
       fontSize: {
         xs: '10px',
-        base: '14px',
+        md: '14px',
+        base: '16px',
         lg: '20px',
         xl: '24px',
         '2xl': '32px',
         '3xl': ['44px', '52px'],
-        '4xl': ['48px', '50px'],
+        '4xl': '48px',
       },
       lineHeight: {
         '50': '50px',
@@ -51,7 +52,7 @@ content: [
       }, 
       fontFamily: {
         'gilroy': ['Gilroy', 'sans-serif'],
-      },
+      }
     },
   },
   plugins: [],
